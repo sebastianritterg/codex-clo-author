@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo Analyze"
+  short_description: "Implement analysis with worker-critic review"
+  default_prompt: "Use $clo-analyze to implement the empirical workflow and review the resulting code."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
+

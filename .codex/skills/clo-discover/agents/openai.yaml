@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo Discover"
+  short_description: "Interview, search literature, and assess data"
+  default_prompt: "Use $clo-discover to interview the project, synthesize literature, or assess candidate datasets."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
+

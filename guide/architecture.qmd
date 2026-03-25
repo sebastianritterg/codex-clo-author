@@ -21,11 +21,17 @@ The Codex adaptation keeps that shape, but translates the layers into Codex-nati
 | Session constitution | `AGENTS.md` | every session in the repo |
 | Repo overlay | `AGENTS.override.md` | every session when present |
 | Repo-local skills | `.agents/skills/` | on demand or by explicit mention |
+| Forkable starter bundle | `.codex/` in this repo | when a user copies or adapts the public starter |
 | User skills | `~/.codex/skills` | on demand or implicit by policy |
 | Custom subagents | `~/.codex/agents` | when the main session delegates |
 | Explicit utilities and config | scripts, references, `config.toml` | when invoked |
 
 The important design difference is that Codex should not be documented as if hidden Claude hooks still exist. If behavior matters, it needs an explicit home.
+
+The public repo therefore carries two distinct layers:
+
+- a forkable `.codex/` starter kit for users who want an upstream-style distribution folder
+- repo-native `AGENTS.md`, `AGENTS.override.md`, and `.agents/skills/` patterns for actual project customization
 
 # Agent Workflow Diagram
 

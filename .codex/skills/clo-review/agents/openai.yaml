@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo Review"
+  short_description: "Run critic and referee review workflows"
+  default_prompt: "Use $clo-review to run the appropriate critic, editor, or referee review for this artifact."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
+

@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo New Project"
+  short_description: "Run the full clo-author research pipeline"
+  default_prompt: "Use $clo-new-project to plan and drive a new research project from idea to paper."
+
+policy:
+  allow_implicit_invocation: false
+
+
+
+

@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo Revise"
+  short_description: "Structure an R-and-R response cycle"
+  default_prompt: "Use $clo-revise to classify referee comments and draft the response workflow."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
+

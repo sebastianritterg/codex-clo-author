@@ -227,16 +227,21 @@ ul.task-list li input[type="checkbox"] {
 <td>on demand or by explicit mention</td>
 </tr>
 <tr class="even">
+<td>Forkable starter bundle</td>
+<td><code>.codex/</code> in this repo</td>
+<td>when a user copies or adapts the public starter</td>
+</tr>
+<tr class="odd">
 <td>User skills</td>
 <td><code>~/.codex/skills</code></td>
 <td>on demand or implicit by policy</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Custom subagents</td>
 <td><code>~/.codex/agents</code></td>
 <td>when the main session delegates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Explicit utilities and config</td>
 <td>scripts, references, <code>config.toml</code></td>
 <td>when invoked</td>
@@ -244,6 +249,11 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>The important design difference is that Codex should not be documented as if hidden Claude hooks still exist. If behavior matters, it needs an explicit home.</p>
+<p>The public repo therefore carries two distinct layers:</p>
+<ul>
+<li>a forkable <code>.codex/</code> starter kit for users who want an upstream-style distribution folder</li>
+<li>repo-native <code>AGENTS.md</code>, <code>AGENTS.override.md</code>, and <code>.agents/skills/</code> patterns for actual project customization</li>
+</ul>
 </section>
 <section id="agent-workflow-diagram" class="level1">
 <h1>Agent Workflow Diagram</h1>

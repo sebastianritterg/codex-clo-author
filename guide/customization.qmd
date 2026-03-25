@@ -17,6 +17,7 @@ The main rule is:
 
 | Layer | Use |
 |---|---|
+| `.codex/` in this repo | forkable starter bundle for the user-level Codex layer |
 | `AGENTS.md` | session constitution and stable working rules |
 | `AGENTS.override.md` | repo-specific overlay |
 | `.agents/skills/` | repo-local extensions and domain skills |
@@ -27,6 +28,8 @@ The main rule is:
 # Constitution Layer
 
 In the Codex adaptation, the constitution layer should stay lean.
+
+The public `.codex/AGENTS.md` in this repository is a starter template, not a claim that repo-local `.codex` is auto-loaded by Codex.
 
 Good material for `AGENTS.md`:
 
@@ -93,9 +96,10 @@ This section shows one concrete installation and research profile as an example,
 
 ## Install layout
 
-- user skills: `C:\Users\USER\.codex\skills`
-- custom subagents: `C:\Users\USER\.codex\agents`
-- user-level constitution: `C:\Users\USER\.codex\AGENTS.md`
+- starter bundle in the public repo: `.codex/`
+- user skills after installation: `~/.codex/skills`
+- custom subagents after installation: `~/.codex/agents`
+- user-level constitution after installation: `~/.codex/AGENTS.md`
 
 ## Active workflow defaults
 

@@ -205,26 +205,30 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
+<td><code>.codex/</code> in this repo</td>
+<td>forkable starter bundle for the user-level Codex layer</td>
+</tr>
+<tr class="even">
 <td><code>AGENTS.md</code></td>
 <td>session constitution and stable working rules</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>AGENTS.override.md</code></td>
 <td>repo-specific overlay</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>.agents/skills/</code></td>
 <td>repo-local extensions and domain skills</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>~/.codex/skills</code></td>
 <td>user-level workflow skills</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>~/.codex/agents</code></td>
 <td>custom subagents</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>workflow references</td>
 <td>active domain, journal, migration, and exploration guidance</td>
 </tr>
@@ -234,6 +238,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="constitution-layer" class="level1">
 <h1>Constitution Layer</h1>
 <p>In the Codex adaptation, the constitution layer should stay lean.</p>
+<p>The public <code>.codex/AGENTS.md</code> in this repository is a starter template, not a claim that repo-local <code>.codex</code> is auto-loaded by Codex.</p>
 <p>Good material for <code>AGENTS.md</code>:</p>
 <ul>
 <li>role philosophy</li>
@@ -298,9 +303,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="install-layout" class="level2">
 <h2 class="anchored" data-anchor-id="install-layout">Install layout</h2>
 <ul>
-<li>user skills: <code>C:\Users\USER\.codex\skills</code></li>
-<li>custom subagents: <code>C:\Users\USER\.codex\agents</code></li>
-<li>user-level constitution: <code>C:\Users\USER\.codex\AGENTS.md</code></li>
+<li>starter bundle in the public repo: <code>.codex/</code></li>
+<li>user skills after installation: <code>~/.codex/skills</code></li>
+<li>custom subagents after installation: <code>~/.codex/agents</code></li>
+<li>user-level constitution after installation: <code>~/.codex/AGENTS.md</code></li>
 </ul>
 </section>
 <section id="active-workflow-defaults" class="level2">

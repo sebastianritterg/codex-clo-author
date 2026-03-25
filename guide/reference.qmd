@@ -24,6 +24,7 @@ subtitle: "Quick lookup for skills, layers, and the Codex migration map"
 
 | Item | Generic location |
 |---|---|
+| public starter bundle | `.codex/` in this repo |
 | user skills | `~/.codex/skills` |
 | custom subagents | `~/.codex/agents` |
 | repo-local skills | `.agents/skills/` |
@@ -41,6 +42,7 @@ This is the table that makes the upstream Clo-Author manual usable without const
 | `.claude/references` | active `clo-workflow` references | Domain, journal, exploration, and migration guidance |
 | slash commands | explicit `$clo-*` skills | Preserve names, change invocation style |
 | `.claude/agents` | `~/.codex/agents` custom subagents | Main Codex session remains orchestrator |
+| distributable `.claude/` bundle in the repo | forkable `.codex/` starter folder in the repo | Public starter kit for AGENTS, skills, agents, and quick reference |
 | `.claude/settings.json` hooks | explicit utilities and config guidance | Avoid undocumented hidden behavior |
 | `.claude` exploration instructions | `explorations/` folder plus exploration reference | Create the folder when missing |
 | orchestrator agent | main Codex session | No separate orchestrator install needed |

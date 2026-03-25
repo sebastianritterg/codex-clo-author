@@ -18,6 +18,7 @@ The goal is simple: preserve the workflow that makes Clo-Author useful for resea
 - explicit `$clo-*` skills instead of slash-command dependence
 - Codex custom subagents instead of Claude agent markdown files
 - explicit exploration scaffolding instead of undocumented folder conventions
+- a forkable `.codex/` starter bundle instead of asking every user to reconstruct the user-level layer from scratch
 
 ## What You Get
 
@@ -26,12 +27,20 @@ The goal is simple: preserve the workflow that makes Clo-Author useful for resea
 - journal-aware peer review via editor plus blind referees
 - a Codex migration layer that makes the upstream Clo-Author manual readable without constant translation
 - an example overlay that shows how one concrete installation and research setup can adapt the generic workflow
+- a public `.codex/` starter kit that can be copied or adapted after forking
 
 ## Get Started in 5 Minutes
 
-### Step 1: Understand the install model
+### Step 1: Understand the starter model
 
-The Codex adaptation assumes two main user-level storage layers:
+This repo ships a forkable starter layer under `.codex/` with:
+
+- `AGENTS.md`
+- `agents/`
+- `skills/`
+- `WORKFLOW_QUICK_REF.md`
+
+When you adopt it for your own machine, the main user-level Codex storage layers are:
 
 - user skills in `~/.codex/skills`
 - custom subagents in `~/.codex/agents`

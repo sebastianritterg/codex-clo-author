@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo Submit"
+  short_description: "Prepare journal targeting and submission checks"
+  default_prompt: "Use $clo-submit to target journals, audit replication materials, or run the final submission gate."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
+

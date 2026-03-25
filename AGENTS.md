@@ -5,6 +5,7 @@ This repository is the source of truth for the public Codex-Clo-Author manual an
 ## Editing Rules
 
 - Edit content under `guide/`. Treat `docs/` as generated output.
+- Keep `.codex/` as a public starter kit. It should stay generic, forkable, and free of machine-specific paths.
 - Keep the information architecture aligned with Clo-Author: Quick Start, User Guide, Agents, Architecture, Customization, Reference.
 - Rewrite for Codex-native concepts. Do not leave Claude-only instructions in active documentation.
 - Preserve the worker-critic architecture, the five pipeline phases, and the exploration sandbox model.

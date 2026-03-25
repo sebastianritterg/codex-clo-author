@@ -1,0 +1,11 @@
+﻿interface:
+  display_name: "Clo Strategize"
+  short_description: "Design an identification strategy or PAP"
+  default_prompt: "Use $clo-strategize to design the identification strategy and robustness plan for this paper."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
+

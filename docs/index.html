@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-you-get" id="toc-what-you-get" class="nav-link active" data-scroll-target="#what-you-get">What You Get</a></li>
   <li><a href="#get-started-in-5-minutes" id="toc-get-started-in-5-minutes" class="nav-link" data-scroll-target="#get-started-in-5-minutes">Get Started in 5 Minutes</a>
   <ul class="collapse">
-  <li><a href="#step-1-understand-the-install-model" id="toc-step-1-understand-the-install-model" class="nav-link" data-scroll-target="#step-1-understand-the-install-model">Step 1: Understand the install model</a></li>
+  <li><a href="#step-1-understand-the-starter-model" id="toc-step-1-understand-the-starter-model" class="nav-link" data-scroll-target="#step-1-understand-the-starter-model">Step 1: Understand the starter model</a></li>
   <li><a href="#step-2-translate-the-upstream-mental-model" id="toc-step-2-translate-the-upstream-mental-model" class="nav-link" data-scroll-target="#step-2-translate-the-upstream-mental-model">Step 2: Translate the upstream mental model</a></li>
   <li><a href="#step-3-create-or-adapt-a-repo" id="toc-step-3-create-or-adapt-a-repo" class="nav-link" data-scroll-target="#step-3-create-or-adapt-a-repo">Step 3: Create or adapt a repo</a></li>
   <li><a href="#step-4-use-the-workflow-phases" id="toc-step-4-use-the-workflow-phases" class="nav-link" data-scroll-target="#step-4-use-the-workflow-phases">Step 4: Use the workflow phases</a></li>
@@ -198,6 +198,7 @@ ul.task-list li input[type="checkbox"] {
 <li>explicit <code>$clo-*</code> skills instead of slash-command dependence</li>
 <li>Codex custom subagents instead of Claude agent markdown files</li>
 <li>explicit exploration scaffolding instead of undocumented folder conventions</li>
+<li>a forkable <code>.codex/</code> starter bundle instead of asking every user to reconstruct the user-level layer from scratch</li>
 </ul>
 <section id="what-you-get" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-get">What You Get</h2>
@@ -207,13 +208,21 @@ ul.task-list li input[type="checkbox"] {
 <li>journal-aware peer review via editor plus blind referees</li>
 <li>a Codex migration layer that makes the upstream Clo-Author manual readable without constant translation</li>
 <li>an example overlay that shows how one concrete installation and research setup can adapt the generic workflow</li>
+<li>a public <code>.codex/</code> starter kit that can be copied or adapted after forking</li>
 </ul>
 </section>
 <section id="get-started-in-5-minutes" class="level2">
 <h2 class="anchored" data-anchor-id="get-started-in-5-minutes">Get Started in 5 Minutes</h2>
-<section id="step-1-understand-the-install-model" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-understand-the-install-model">Step 1: Understand the install model</h3>
-<p>The Codex adaptation assumes two main user-level storage layers:</p>
+<section id="step-1-understand-the-starter-model" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-understand-the-starter-model">Step 1: Understand the starter model</h3>
+<p>This repo ships a forkable starter layer under <code>.codex/</code> with:</p>
+<ul>
+<li><code>AGENTS.md</code></li>
+<li><code>agents/</code></li>
+<li><code>skills/</code></li>
+<li><code>WORKFLOW_QUICK_REF.md</code></li>
+</ul>
+<p>When you adopt it for your own machine, the main user-level Codex storage layers are:</p>
 <ul>
 <li>user skills in <code>~/.codex/skills</code></li>
 <li>custom subagents in <code>~/.codex/agents</code></li>
