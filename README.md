@@ -57,6 +57,6 @@ GitHub Pages should be configured to serve from the `docs/` directory on `main`.
 
 ## Attribution
 
-This manual is inspired by and structurally adapted from [The Clo-Author](https://hsantanna.org/clo-author/) by Hugo Sant'Anna.
+This manual is adapted from the Claude-based [Clo-Author](https://hsantanna.org/clo-author/) project and repo by Hugo Sant'Anna.
 
 It does not attempt a literal Claude clone. The goal is to preserve the workflow architecture while making the instructions accurate and usable for Codex.

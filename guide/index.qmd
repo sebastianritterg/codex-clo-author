@@ -108,4 +108,4 @@ It is a public operating manual for a Codex-native port of the Clo-Author workfl
 
 ## Attribution
 
-This project is structurally inspired by [The Clo-Author](https://hsantanna.org/clo-author/) by Hugo Sant'Anna. The aim here is adaptation, not duplication.
+This project is adapted from the Claude-based [Clo-Author](https://hsantanna.org/clo-author/) by Hugo Sant'Anna. The aim here is adaptation, not duplication.
