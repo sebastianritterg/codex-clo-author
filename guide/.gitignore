@@ -1,0 +1,5 @@
+.quarto/
+.sass-cache/
+
+/.quarto/
+**/*.quarto_ipynb

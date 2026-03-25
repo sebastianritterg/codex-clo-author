@@ -1,0 +1,185 @@
+---
+title: "Agents"
+subtitle: "How the specialist roles map into Codex custom subagents"
+---
+
+# How Agents Work
+
+The Codex adaptation keeps the Clo-Author specialist structure, but the implementation format changes:
+
+- upstream markdown agent definitions become Codex custom subagents
+- the main Codex session remains the orchestrator
+- skills decide when to dispatch roles
+
+Each role should stay narrow. The architecture works because workers do the making and critics do the checking.
+
+# The Researchers (Discovery Phase)
+
+## Librarian
+
+Creates:
+
+- literature maps
+- annotated bibliographies
+- frontier summaries
+
+## Librarian Critic
+
+Checks:
+
+- coverage gaps
+- recency
+- scope discipline
+- journal relevance
+
+## Explorer
+
+Creates:
+
+- data source lists
+- feasibility rankings
+- variable-coverage assessments
+
+## Explorer Critic
+
+Checks:
+
+- measurement validity
+- sample selection
+- external validity
+- design compatibility
+
+# The Strategists (Strategy Phase)
+
+## Strategist
+
+Designs:
+
+- estimand
+- identification strategy
+- robustness plan
+- falsification tests
+
+## Strategist Critic
+
+Checks:
+
+- design validity
+- assumptions
+- inference logic
+- failure modes
+
+# The Builders (Execution Phase)
+
+## Data Engineer
+
+Handles:
+
+- cleaning
+- wrangling
+- figure data preparation
+- reproducible output structure
+
+## Coder
+
+Handles:
+
+- estimation scripts
+- table generation
+- analysis orchestration
+
+## Coder Critic
+
+Checks:
+
+- strategy alignment
+- reproducibility
+- code quality
+- output readiness
+
+## Writer
+
+Handles:
+
+- paper sections
+- notation discipline
+- claims-and-evidence alignment
+
+## Writer Critic
+
+Checks:
+
+- hedging
+- notation drift
+- claim inflation
+- style consistency
+
+# The Reviewers (Peer Review Phase)
+
+## Editor
+
+The editor does not simply summarize. The editor:
+
+- calibrates scope
+- decides whether the paper is appropriately targeted
+- assigns the referee posture
+- synthesizes the decision after reports come back
+
+## Domain Referee
+
+Checks:
+
+- contribution
+- literature positioning
+- external validity
+- field expectations
+
+## Methods Referee
+
+Checks:
+
+- identification
+- estimation
+- inference
+- robustness sufficiency
+
+# The Infrastructure
+
+## Storyteller and Storyteller Critic
+
+These roles run in the presentation workflow and focus on:
+
+- deck structure
+- narrative arc
+- figure fidelity
+- talk format quality
+
+## Verifier
+
+The verifier is the final mechanical gatekeeper:
+
+- runability
+- package completeness
+- replication readiness
+- output freshness
+
+# Quick Catalog {#agent-catalog}
+
+| Phase | Worker roles | Critic or referee roles |
+|---|---|---|
+| Discovery | `librarian`, `explorer` | `librarian_critic`, `explorer_critic` |
+| Strategy | `strategist` | `strategist_critic` |
+| Execution | `data_engineer`, `coder`, `writer` | `coder_critic`, `writer_critic` |
+| Peer Review | `editor` | `domain_referee`, `methods_referee` |
+| Submission | `verifier` | binary pass/fail gate |
+| Talks | `storyteller` | `storyteller_critic` |
+
+# Codex-Specific Notes
+
+In Codex, these roles typically live as TOML custom subagents under `~/.codex/agents`.
+
+The public architecture assumes:
+
+- the main Codex session stays in charge
+- custom subagents do not become mini-orchestrators
+- the repo overlay may override generic defaults

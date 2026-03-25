@@ -1,0 +1,200 @@
+---
+title: "User Guide"
+subtitle: "How to operate the Codex-Clo-Author workflow in practice"
+---
+
+# How It Works
+
+Codex-Clo-Author keeps the original research workflow logic:
+
+- the main Codex session acts as orchestrator
+- narrow subagents handle bounded specialist roles
+- creators create, critics review
+- the workflow advances only when artifacts clear their quality gates
+
+What changes is the implementation surface. Instead of relying on Claude-specific configuration layers, the Codex adaptation uses:
+
+- `AGENTS.md` and repo overlays
+- Codex skills with `agents/openai.yaml`
+- Codex custom subagents in TOML
+- explicit workflow references
+
+# Research Workflow
+
+## Phase 1: Discovery
+
+Discovery should produce:
+
+- a research specification
+- a literature map
+- a data assessment
+
+The relevant roles are:
+
+- `librarian` and `librarian_critic`
+- `explorer` and `explorer_critic`
+
+The usual explicit entry point is `$clo-discover`.
+
+## Phase 2: Strategy
+
+Strategy locks the estimand, design, assumptions, falsification logic, and robustness plan before coding starts.
+
+The relevant roles are:
+
+- `strategist`
+- `strategist_critic`
+
+The usual explicit entry point is `$clo-strategize`.
+
+## Phase 3: Execution
+
+Execution translates the design into:
+
+- cleaned data products
+- analysis scripts
+- tables and figures
+- paper sections
+
+The relevant roles are:
+
+- `data_engineer`
+- `coder`
+- `coder_critic`
+- `writer`
+- `writer_critic`
+
+The active default language stance in this adaptation is:
+
+- Python primary
+- Stata co-default
+- R and Julia supported when the repo or the user explicitly centers them
+
+## Phase 4: Peer Review
+
+Peer review is not a grammar pass. It is where the workflow asks whether the project is credible, scoped correctly, journal-calibrated, and ready to move forward.
+
+The relevant roles are:
+
+- `editor`
+- `domain_referee`
+- `methods_referee`
+
+The usual explicit entry point is `$clo-review`.
+
+## Phase 5: Submission
+
+Submission requires more than polished prose. The workflow should verify:
+
+- replication readiness
+- journal fit
+- final package completeness
+
+The relevant role is:
+
+- `verifier`
+
+The usual explicit entry point is `$clo-submit`.
+
+# Quality Gates
+
+The active scoring thresholds remain:
+
+- `>= 80`: commit-ready
+- `>= 90`: merge-ready
+- `>= 95` with no weak component: submission-ready
+
+These thresholds matter because the architecture assumes critique is operational, not decorative.
+
+# Exploration Workflow {#sec-exploration}
+
+`explorations/` remains part of the public workflow because exploratory work exists in real research and should have an explicit home.
+
+Use `explorations/` for:
+
+- prototypes
+- side investigations
+- speculative identification checks
+- draft data or measurement experiments
+
+Do not use it for:
+
+- canonical cleaned data
+- manuscript-ready figures or tables
+- the final source of truth for analysis code
+
+## Minimum rule
+
+If exploratory work is needed and `explorations/` does not exist, create:
+
+- `explorations/README.md`
+- `explorations/ARCHIVE/`
+
+Then create a subfolder per exploration.
+
+## Graduation rule
+
+Once an exploration becomes part of the real pipeline, promote the relevant outputs into the repo’s canonical code, output, docs, or manuscript paths and leave a short record of what graduated.
+
+# Self-Improvement
+
+The Codex adaptation treats self-improvement as explicit maintenance, not hidden behavior.
+
+Use:
+
+- explicit upgrade workflows
+- translation references
+- repo-local overlays
+- review loops that fix recurring failure modes
+
+Do not assume hidden hooks will save state, protect files, or restore context automatically.
+
+# Customizing for Your Domain
+
+The domain layer should define:
+
+- journal tiers
+- common data sources
+- common identification strategies
+- field conventions
+- notation and referee expectations
+
+The active Codex adaptation keeps this calibration in the `clo-workflow` reference layer rather than requiring the user to memorize upstream `.claude` paths.
+
+# Upgrading the Port
+
+Upgrading means:
+
+1. refresh upstream Clo-Author source material
+2. rerun the Codex port generator
+3. review generated skills, subagents, and references
+4. sync managed installs
+5. keep repo overlays separate from generic user-level defaults
+
+The critical rule is to preserve provenance mirrors while rewriting active guidance for Codex.
+
+# Troubleshooting
+
+## The upstream guide says `CLAUDE.md`
+
+Translate that to:
+
+- `AGENTS.md`
+- `AGENTS.override.md`
+- repo-local skills
+
+## The upstream guide mentions `.claude/rules`
+
+Translate that to:
+
+- active workflow references
+- source-rule mirrors when provenance matters
+- repo overlays for truly always-on repo behavior
+
+## The workflow feels too implicit
+
+Use explicit skill mentions such as `$clo-review` or `$clo-discover` instead of relying on automatic inference.
+
+## The repo lacks an exploration sandbox
+
+Create `explorations/README.md` and `explorations/ARCHIVE/` before running prototype work.

@@ -1,0 +1,38 @@
+name: render-docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: guide
+          to: html
+
+      - name: Ensure nojekyll marker
+        run: touch docs/.nojekyll
+
+      - name: Commit rendered docs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: render docs"
+          file_pattern: docs/*

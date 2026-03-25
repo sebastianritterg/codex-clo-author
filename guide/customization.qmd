@@ -1,0 +1,132 @@
+---
+title: "Customization"
+subtitle: "How to adapt the architecture to your own Codex setup"
+---
+
+# Overview
+
+Codex-Clo-Author is designed to be customized without losing the architecture.
+
+The main rule is:
+
+- keep generic user-level defaults generic
+- keep project-specific behavior in repo overlays
+- keep provenance available but separate from active operating guidance
+
+# Codex Configuration Layers
+
+| Layer | Use |
+|---|---|
+| `AGENTS.md` | session constitution and stable working rules |
+| `AGENTS.override.md` | repo-specific overlay |
+| `.agents/skills/` | repo-local extensions and domain skills |
+| `~/.agents/skills` | user-level workflow skills |
+| `~/.codex/skills` | compatibility mirror for user-level skills |
+| `~/.codex/agents` | custom subagents |
+| workflow references | active domain, journal, migration, and exploration guidance |
+
+# Constitution Layer
+
+In the Codex adaptation, the constitution layer should stay lean.
+
+Good material for `AGENTS.md`:
+
+- role philosophy
+- repo path conventions
+- language defaults
+- verification expectations
+- escalation rules
+
+Bad material for `AGENTS.md`:
+
+- long tables of journal profiles
+- full templates
+- provenance dumps
+- detailed tutorials that belong in separate references
+
+# Skills Layer
+
+Codex skills should expose workflows explicitly and use `agents/openai.yaml` for machine-readable metadata.
+
+Good skill behavior:
+
+- one clear job
+- explicit default prompt
+- clear role boundaries
+- references loaded only when needed
+
+The active Clo-Author port keeps the `$clo-*` naming to preserve habit continuity for users coming from the upstream manual.
+
+# Subagents Layer
+
+Custom subagents should stay narrow.
+
+A good Codex subagent:
+
+- has one role
+- avoids orchestration drift
+- keeps only the config keys it needs
+- describes its job in Codex-native developer instructions
+
+# References and Source Mirrors
+
+The Codex adaptation separates:
+
+- active references used by the workflow
+- source mirrors preserved for provenance
+
+This matters because users still need to understand where upstream Clo-Author material landed, but active instructions should not read like a museum exhibit.
+
+# Explorations
+
+Keep `explorations/` as a project-level convention.
+
+If exploratory work is needed and the folder is missing, create:
+
+- `explorations/README.md`
+- `explorations/ARCHIVE/`
+
+Then keep each exploration in its own subfolder until the work graduates into the canonical pipeline.
+
+# Sebastian Overlay
+
+This section documents one concrete installation and research profile.
+
+## Install layout
+
+- user skills: `C:\Users\USER\.agents\skills`
+- compatibility mirror: `C:\Users\USER\.codex\skills`
+- custom subagents: `C:\Users\USER\.codex\agents`
+- user-level constitution: `C:\Users\USER\.codex\AGENTS.md`
+
+## Active workflow defaults
+
+- Python primary
+- Stata co-default
+- R and Julia supported when explicitly needed
+- journal examples include `Journal of Development Economics`
+- neighboring regional outlets include `Regional Studies` and `Journal of Economic Geography`
+
+## Repo overlay pattern
+
+For a project repo:
+
+- put stable repo rules in `AGENTS.md`
+- put project-specific deviations in `AGENTS.override.md`
+- put repo-only skills in `.agents/skills/`
+- create `explorations/` when the project needs a prototype sandbox
+
+## Research orientation
+
+The current overlay is designed around empirical economics and adjacent social science workflows, not general software engineering alone.
+
+# Practical Customization Strategy
+
+Start with:
+
+1. a lean `AGENTS.md`
+2. a small repo overlay
+3. a stable skill naming convention
+4. only the subagents you actively use
+
+Add more structure only when it prevents repeated failure, not because the upstream project had another file.

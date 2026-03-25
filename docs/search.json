@@ -1,0 +1,338 @@
+[
+  {
+    "objectID": "user-guide.html",
+    "href": "user-guide.html",
+    "title": "User Guide",
+    "section": "",
+    "text": "Codex-Clo-Author keeps the original research workflow logic:\n\nthe main Codex session acts as orchestrator\nnarrow subagents handle bounded specialist roles\ncreators create, critics review\nthe workflow advances only when artifacts clear their quality gates\n\nWhat changes is the implementation surface. Instead of relying on Claude-specific configuration layers, the Codex adaptation uses:\n\nAGENTS.md and repo overlays\nCodex skills with agents/openai.yaml\nCodex custom subagents in TOML\nexplicit workflow references"
+  },
+  {
+    "objectID": "user-guide.html#phase-1-discovery",
+    "href": "user-guide.html#phase-1-discovery",
+    "title": "User Guide",
+    "section": "Phase 1: Discovery",
+    "text": "Phase 1: Discovery\nDiscovery should produce:\n\na research specification\na literature map\na data assessment\n\nThe relevant roles are:\n\nlibrarian and librarian_critic\nexplorer and explorer_critic\n\nThe usual explicit entry point is $clo-discover."
+  },
+  {
+    "objectID": "user-guide.html#phase-2-strategy",
+    "href": "user-guide.html#phase-2-strategy",
+    "title": "User Guide",
+    "section": "Phase 2: Strategy",
+    "text": "Phase 2: Strategy\nStrategy locks the estimand, design, assumptions, falsification logic, and robustness plan before coding starts.\nThe relevant roles are:\n\nstrategist\nstrategist_critic\n\nThe usual explicit entry point is $clo-strategize."
+  },
+  {
+    "objectID": "user-guide.html#phase-3-execution",
+    "href": "user-guide.html#phase-3-execution",
+    "title": "User Guide",
+    "section": "Phase 3: Execution",
+    "text": "Phase 3: Execution\nExecution translates the design into:\n\ncleaned data products\nanalysis scripts\ntables and figures\npaper sections\n\nThe relevant roles are:\n\ndata_engineer\ncoder\ncoder_critic\nwriter\nwriter_critic\n\nThe active default language stance in this adaptation is:\n\nPython primary\nStata co-default\nR and Julia supported when the repo or the user explicitly centers them"
+  },
+  {
+    "objectID": "user-guide.html#phase-4-peer-review",
+    "href": "user-guide.html#phase-4-peer-review",
+    "title": "User Guide",
+    "section": "Phase 4: Peer Review",
+    "text": "Phase 4: Peer Review\nPeer review is not a grammar pass. It is where the workflow asks whether the project is credible, scoped correctly, journal-calibrated, and ready to move forward.\nThe relevant roles are:\n\neditor\ndomain_referee\nmethods_referee\n\nThe usual explicit entry point is $clo-review."
+  },
+  {
+    "objectID": "user-guide.html#phase-5-submission",
+    "href": "user-guide.html#phase-5-submission",
+    "title": "User Guide",
+    "section": "Phase 5: Submission",
+    "text": "Phase 5: Submission\nSubmission requires more than polished prose. The workflow should verify:\n\nreplication readiness\njournal fit\nfinal package completeness\n\nThe relevant role is:\n\nverifier\n\nThe usual explicit entry point is $clo-submit."
+  },
+  {
+    "objectID": "user-guide.html#minimum-rule",
+    "href": "user-guide.html#minimum-rule",
+    "title": "User Guide",
+    "section": "Minimum rule",
+    "text": "Minimum rule\nIf exploratory work is needed and explorations/ does not exist, create:\n\nexplorations/README.md\nexplorations/ARCHIVE/\n\nThen create a subfolder per exploration."
+  },
+  {
+    "objectID": "user-guide.html#graduation-rule",
+    "href": "user-guide.html#graduation-rule",
+    "title": "User Guide",
+    "section": "Graduation rule",
+    "text": "Graduation rule\nOnce an exploration becomes part of the real pipeline, promote the relevant outputs into the repo’s canonical code, output, docs, or manuscript paths and leave a short record of what graduated."
+  },
+  {
+    "objectID": "user-guide.html#the-upstream-guide-says-claude.md",
+    "href": "user-guide.html#the-upstream-guide-says-claude.md",
+    "title": "User Guide",
+    "section": "The upstream guide says CLAUDE.md",
+    "text": "The upstream guide says CLAUDE.md\nTranslate that to:\n\nAGENTS.md\nAGENTS.override.md\nrepo-local skills"
+  },
+  {
+    "objectID": "user-guide.html#the-upstream-guide-mentions-.clauderules",
+    "href": "user-guide.html#the-upstream-guide-mentions-.clauderules",
+    "title": "User Guide",
+    "section": "The upstream guide mentions .claude/rules",
+    "text": "The upstream guide mentions .claude/rules\nTranslate that to:\n\nactive workflow references\nsource-rule mirrors when provenance matters\nrepo overlays for truly always-on repo behavior"
+  },
+  {
+    "objectID": "user-guide.html#the-workflow-feels-too-implicit",
+    "href": "user-guide.html#the-workflow-feels-too-implicit",
+    "title": "User Guide",
+    "section": "The workflow feels too implicit",
+    "text": "The workflow feels too implicit\nUse explicit skill mentions such as $clo-review or $clo-discover instead of relying on automatic inference."
+  },
+  {
+    "objectID": "user-guide.html#the-repo-lacks-an-exploration-sandbox",
+    "href": "user-guide.html#the-repo-lacks-an-exploration-sandbox",
+    "title": "User Guide",
+    "section": "The repo lacks an exploration sandbox",
+    "text": "The repo lacks an exploration sandbox\nCreate explorations/README.md and explorations/ARCHIVE/ before running prototype work."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Codex-Clo-Author",
+    "section": "",
+    "text": "Codex-Clo-Author documents how to run a Clo-Author-style empirical research architecture in Codex without pretending that Codex is Claude.\nThe goal is simple: preserve the workflow that makes Clo-Author useful for research, while translating every active instruction into Codex-native primitives:"
+  },
+  {
+    "objectID": "index.html#what-you-get",
+    "href": "index.html#what-you-get",
+    "title": "Codex-Clo-Author",
+    "section": "What You Get",
+    "text": "What You Get\n\na five-phase research pipeline\nworker-critic separation across the whole workflow\njournal-aware peer review via editor plus blind referees\na Codex migration layer that makes the upstream Clo-Author manual readable without constant translation\na Sebastian overlay that shows one concrete Windows-based installation and research setup"
+  },
+  {
+    "objectID": "index.html#get-started-in-5-minutes",
+    "href": "index.html#get-started-in-5-minutes",
+    "title": "Codex-Clo-Author",
+    "section": "Get Started in 5 Minutes",
+    "text": "Get Started in 5 Minutes\n\nStep 1: Understand the install model\nThe Codex adaptation assumes three main storage layers:\n\nuser skills in ~/.agents/skills\nmirrored compatibility skills in ~/.codex/skills\ncustom subagents in ~/.codex/agents\n\nRepo-specific overrides still belong in:\n\nAGENTS.md\nAGENTS.override.md\n.agents/skills/\n\n\n\nStep 2: Translate the upstream mental model\nIf the upstream Clo-Author manual says:\n\nCLAUDE.md -&gt; read or create AGENTS.md\n.claude/rules -&gt; use active workflow references plus repo overlay guidance\n/discover -&gt; use $clo-discover\n.claude/agents -&gt; use Codex custom subagents\n\nThe public migration cheatsheet lives in Reference.\n\n\nStep 3: Create or adapt a repo\nFor a new research repo, the minimum Codex-facing structure is:\n\nroot AGENTS.md\noptional AGENTS.override.md\nrepo-local skills in .agents/skills/\ncanonical manuscript, code, output, and docs directories\nexplorations/ when the project needs a sandbox for prototypes\n\n\n\nStep 4: Use the workflow phases\nThe workflow stays the same:\n\nDiscovery\nStrategy\nExecution\nPeer Review\nSubmission\n\nTalks can run in parallel with review.\n\n\nStep 5: Start with explicit skills\nThe safest Codex-native entry points are:\n\n$clo-discover\n$clo-strategize\n$clo-analyze\n$clo-write\n$clo-review\n$clo-submit\n\nThe architecture page explains how these map to agents and quality gates."
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "Codex-Clo-Author",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\n\n\n\n\n\n\n\nTool\nWhy it matters\nNotes\n\n\n\n\nCodex\nMain orchestrator\nDesktop or terminal usage both fit the architecture\n\n\nPython\nDefault automation and analysis language\nPrimary default in this adaptation\n\n\nStata\nEconometric co-default\nUse when the repo or replication target centers Stata\n\n\nXeLaTeX\nPaper compilation\nNeeded for LaTeX manuscripts and slides\n\n\nGit\nVersioning and review workflow\nRequired for repo-based operation\n\n\nQuarto\nDocs site only\nNeeded to render this manual locally\n\n\n\nR and Julia remain supported, but they are no longer the default recommendation in the active Codex adaptation."
+  },
+  {
+    "objectID": "index.html#what-this-site-is-not",
+    "href": "index.html#what-this-site-is-not",
+    "title": "Codex-Clo-Author",
+    "section": "What This Site Is Not",
+    "text": "What This Site Is Not\nThis site is not:\n\na literal Claude clone\na promise that Codex supports hidden .claude mechanics\na packaged installer for one exact workstation\n\nIt is a public operating manual for a Codex-native port of the Clo-Author workflow."
+  },
+  {
+    "objectID": "index.html#attribution",
+    "href": "index.html#attribution",
+    "title": "Codex-Clo-Author",
+    "section": "Attribution",
+    "text": "Attribution\nThis project is structurally inspired by The Clo-Author by Hugo Sant’Anna. The aim here is adaptation, not duplication."
+  },
+  {
+    "objectID": "architecture.html",
+    "href": "architecture.html",
+    "title": "Architecture",
+    "section": "",
+    "text": "The original Clo-Author architecture is powerful because it separates:\n\nproject constitution\nalways-needed workflow rules\non-demand references\non-demand workflows\nspecialist agents\ninfrastructure behavior\n\nThe Codex adaptation keeps that shape, but translates the layers into Codex-native surfaces.\n\n\n\n\n\n\n\n\nLayer\nCodex-native location\nLoaded when\n\n\n\n\nSession constitution\nAGENTS.md\nevery session in the repo\n\n\nRepo overlay\nAGENTS.override.md\nevery session when present\n\n\nRepo-local skills\n.agents/skills/\non demand or by explicit mention\n\n\nUser skills\n~/.agents/skills and mirror ~/.codex/skills\non demand or implicit by policy\n\n\nCustom subagents\n~/.codex/agents\nwhen the main session delegates\n\n\nExplicit utilities and config\nscripts, references, config.toml\nwhen invoked\n\n\n\nThe important design difference is that Codex should not be documented as if hidden Claude hooks still exist. If behavior matters, it needs an explicit home."
+  },
+  {
+    "objectID": "architecture.html#agents-by-phase",
+    "href": "architecture.html#agents-by-phase",
+    "title": "Architecture",
+    "section": "Agents by Phase",
+    "text": "Agents by Phase\nThe structure remains worker -&gt; critic:\n\nDiscovery: librarian -&gt; librarian_critic, explorer -&gt; explorer_critic\nStrategy: strategist -&gt; strategist_critic\nExecution: data_engineer or coder or writer -&gt; paired critics\nPeer Review: editor plus two blind referees\nSubmission: verifier as final gate"
+  },
+  {
+    "objectID": "architecture.html#talks",
+    "href": "architecture.html#talks",
+    "title": "Architecture",
+    "section": "Talks",
+    "text": "Talks\nTalk creation remains parallel to peer review, not a final afterthought."
+  },
+  {
+    "objectID": "architecture.html#replication-first-coding",
+    "href": "architecture.html#replication-first-coding",
+    "title": "Architecture",
+    "section": "Replication-first coding",
+    "text": "Replication-first coding\nThe Codex adaptation should still encourage:\n\nstable file naming\nreproducible outputs\nexplicit serialization of reusable intermediates\nreview before promotion into manuscript assets"
+  },
+  {
+    "objectID": "architecture.html#exploration-first-side-work",
+    "href": "architecture.html#exploration-first-side-work",
+    "title": "Architecture",
+    "section": "Exploration-first side work",
+    "text": "Exploration-first side work\nexplorations/ is part of the architecture, not a convenience folder. It gives prototype work an explicit home outside the canonical pipeline."
+  },
+  {
+    "objectID": "agents.html",
+    "href": "agents.html",
+    "title": "Agents",
+    "section": "",
+    "text": "The Codex adaptation keeps the Clo-Author specialist structure, but the implementation format changes:\n\nupstream markdown agent definitions become Codex custom subagents\nthe main Codex session remains the orchestrator\nskills decide when to dispatch roles\n\nEach role should stay narrow. The architecture works because workers do the making and critics do the checking."
+  },
+  {
+    "objectID": "agents.html#librarian",
+    "href": "agents.html#librarian",
+    "title": "Agents",
+    "section": "Librarian",
+    "text": "Librarian\nCreates:\n\nliterature maps\nannotated bibliographies\nfrontier summaries"
+  },
+  {
+    "objectID": "agents.html#librarian-critic",
+    "href": "agents.html#librarian-critic",
+    "title": "Agents",
+    "section": "Librarian Critic",
+    "text": "Librarian Critic\nChecks:\n\ncoverage gaps\nrecency\nscope discipline\njournal relevance"
+  },
+  {
+    "objectID": "agents.html#explorer",
+    "href": "agents.html#explorer",
+    "title": "Agents",
+    "section": "Explorer",
+    "text": "Explorer\nCreates:\n\ndata source lists\nfeasibility rankings\nvariable-coverage assessments"
+  },
+  {
+    "objectID": "agents.html#explorer-critic",
+    "href": "agents.html#explorer-critic",
+    "title": "Agents",
+    "section": "Explorer Critic",
+    "text": "Explorer Critic\nChecks:\n\nmeasurement validity\nsample selection\nexternal validity\ndesign compatibility"
+  },
+  {
+    "objectID": "agents.html#strategist",
+    "href": "agents.html#strategist",
+    "title": "Agents",
+    "section": "Strategist",
+    "text": "Strategist\nDesigns:\n\nestimand\nidentification strategy\nrobustness plan\nfalsification tests"
+  },
+  {
+    "objectID": "agents.html#strategist-critic",
+    "href": "agents.html#strategist-critic",
+    "title": "Agents",
+    "section": "Strategist Critic",
+    "text": "Strategist Critic\nChecks:\n\ndesign validity\nassumptions\ninference logic\nfailure modes"
+  },
+  {
+    "objectID": "agents.html#data-engineer",
+    "href": "agents.html#data-engineer",
+    "title": "Agents",
+    "section": "Data Engineer",
+    "text": "Data Engineer\nHandles:\n\ncleaning\nwrangling\nfigure data preparation\nreproducible output structure"
+  },
+  {
+    "objectID": "agents.html#coder",
+    "href": "agents.html#coder",
+    "title": "Agents",
+    "section": "Coder",
+    "text": "Coder\nHandles:\n\nestimation scripts\ntable generation\nanalysis orchestration"
+  },
+  {
+    "objectID": "agents.html#coder-critic",
+    "href": "agents.html#coder-critic",
+    "title": "Agents",
+    "section": "Coder Critic",
+    "text": "Coder Critic\nChecks:\n\nstrategy alignment\nreproducibility\ncode quality\noutput readiness"
+  },
+  {
+    "objectID": "agents.html#writer",
+    "href": "agents.html#writer",
+    "title": "Agents",
+    "section": "Writer",
+    "text": "Writer\nHandles:\n\npaper sections\nnotation discipline\nclaims-and-evidence alignment"
+  },
+  {
+    "objectID": "agents.html#writer-critic",
+    "href": "agents.html#writer-critic",
+    "title": "Agents",
+    "section": "Writer Critic",
+    "text": "Writer Critic\nChecks:\n\nhedging\nnotation drift\nclaim inflation\nstyle consistency"
+  },
+  {
+    "objectID": "agents.html#editor",
+    "href": "agents.html#editor",
+    "title": "Agents",
+    "section": "Editor",
+    "text": "Editor\nThe editor does not simply summarize. The editor:\n\ncalibrates scope\ndecides whether the paper is appropriately targeted\nassigns the referee posture\nsynthesizes the decision after reports come back"
+  },
+  {
+    "objectID": "agents.html#domain-referee",
+    "href": "agents.html#domain-referee",
+    "title": "Agents",
+    "section": "Domain Referee",
+    "text": "Domain Referee\nChecks:\n\ncontribution\nliterature positioning\nexternal validity\nfield expectations"
+  },
+  {
+    "objectID": "agents.html#methods-referee",
+    "href": "agents.html#methods-referee",
+    "title": "Agents",
+    "section": "Methods Referee",
+    "text": "Methods Referee\nChecks:\n\nidentification\nestimation\ninference\nrobustness sufficiency"
+  },
+  {
+    "objectID": "agents.html#storyteller-and-storyteller-critic",
+    "href": "agents.html#storyteller-and-storyteller-critic",
+    "title": "Agents",
+    "section": "Storyteller and Storyteller Critic",
+    "text": "Storyteller and Storyteller Critic\nThese roles run in the presentation workflow and focus on:\n\ndeck structure\nnarrative arc\nfigure fidelity\ntalk format quality"
+  },
+  {
+    "objectID": "agents.html#verifier",
+    "href": "agents.html#verifier",
+    "title": "Agents",
+    "section": "Verifier",
+    "text": "Verifier\nThe verifier is the final mechanical gatekeeper:\n\nrunability\npackage completeness\nreplication readiness\noutput freshness"
+  },
+  {
+    "objectID": "customization.html",
+    "href": "customization.html",
+    "title": "Customization",
+    "section": "",
+    "text": "Codex-Clo-Author is designed to be customized without losing the architecture.\nThe main rule is:\n\nkeep generic user-level defaults generic\nkeep project-specific behavior in repo overlays\nkeep provenance available but separate from active operating guidance"
+  },
+  {
+    "objectID": "customization.html#install-layout",
+    "href": "customization.html#install-layout",
+    "title": "Customization",
+    "section": "Install layout",
+    "text": "Install layout\n\nuser skills: C:\\Users\\USER\\.agents\\skills\ncompatibility mirror: C:\\Users\\USER\\.codex\\skills\ncustom subagents: C:\\Users\\USER\\.codex\\agents\nuser-level constitution: C:\\Users\\USER\\.codex\\AGENTS.md"
+  },
+  {
+    "objectID": "customization.html#active-workflow-defaults",
+    "href": "customization.html#active-workflow-defaults",
+    "title": "Customization",
+    "section": "Active workflow defaults",
+    "text": "Active workflow defaults\n\nPython primary\nStata co-default\nR and Julia supported when explicitly needed\njournal examples include Journal of Development Economics\nneighboring regional outlets include Regional Studies and Journal of Economic Geography"
+  },
+  {
+    "objectID": "customization.html#repo-overlay-pattern",
+    "href": "customization.html#repo-overlay-pattern",
+    "title": "Customization",
+    "section": "Repo overlay pattern",
+    "text": "Repo overlay pattern\nFor a project repo:\n\nput stable repo rules in AGENTS.md\nput project-specific deviations in AGENTS.override.md\nput repo-only skills in .agents/skills/\ncreate explorations/ when the project needs a prototype sandbox"
+  },
+  {
+    "objectID": "customization.html#research-orientation",
+    "href": "customization.html#research-orientation",
+    "title": "Customization",
+    "section": "Research orientation",
+    "text": "Research orientation\nThe current overlay is designed around empirical economics and adjacent social science workflows, not general software engineering alone."
+  },
+  {
+    "objectID": "reference.html",
+    "href": "reference.html",
+    "title": "Reference",
+    "section": "",
+    "text": "Upstream intent\nCodex-facing entry point\n\n\n\n\nnew project pipeline\n$clo-new-project\n\n\ndiscovery\n$clo-discover\n\n\nidentification strategy\n$clo-strategize\n\n\nanalysis and outputs\n$clo-analyze\n\n\ndrafting\n$clo-write\n\n\nreview and peer review\n$clo-review\n\n\nrevision cycle\n$clo-revise\n\n\ntalks\n$clo-talk\n\n\nsubmission package\n$clo-submit\n\n\nmaintenance and upgrade\n$clo-research-tools\n\n\n\n\n\n\n\n\n\nItem\nGeneric location\n\n\n\n\nuser skills\n~/.agents/skills\n\n\ncompatibility mirror\n~/.codex/skills\n\n\ncustom subagents\n~/.codex/agents\n\n\nrepo-local skills\n.agents/skills/\n\n\nsession constitution\nAGENTS.md\n\n\nrepo overlay\nAGENTS.override.md"
+  },
+  {
+    "objectID": "reference.html#core-workflow-skills",
+    "href": "reference.html#core-workflow-skills",
+    "title": "Reference",
+    "section": "",
+    "text": "Upstream intent\nCodex-facing entry point\n\n\n\n\nnew project pipeline\n$clo-new-project\n\n\ndiscovery\n$clo-discover\n\n\nidentification strategy\n$clo-strategize\n\n\nanalysis and outputs\n$clo-analyze\n\n\ndrafting\n$clo-write\n\n\nreview and peer review\n$clo-review\n\n\nrevision cycle\n$clo-revise\n\n\ntalks\n$clo-talk\n\n\nsubmission package\n$clo-submit\n\n\nmaintenance and upgrade\n$clo-research-tools"
+  },
+  {
+    "objectID": "reference.html#install-locations",
+    "href": "reference.html#install-locations",
+    "title": "Reference",
+    "section": "",
+    "text": "Item\nGeneric location\n\n\n\n\nuser skills\n~/.agents/skills\n\n\ncompatibility mirror\n~/.codex/skills\n\n\ncustom subagents\n~/.codex/agents\n\n\nrepo-local skills\n.agents/skills/\n\n\nsession constitution\nAGENTS.md\n\n\nrepo overlay\nAGENTS.override.md"
+  }
+]

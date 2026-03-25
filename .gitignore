@@ -1,0 +1,6 @@
+.quarto/
+.sass-cache/
+.cache/
+_site/
+.DS_Store
+Thumbs.db

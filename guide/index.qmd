@@ -1,0 +1,111 @@
+---
+title: "Codex-Clo-Author"
+subtitle: "A Codex-native adaptation of the Clo-Author research workflow"
+---
+
+Codex-Clo-Author documents how to run a Clo-Author-style empirical research architecture in Codex without pretending that Codex is Claude.
+
+The goal is simple: preserve the workflow that makes Clo-Author useful for research, while translating every active instruction into Codex-native primitives:
+
+- `AGENTS.md` and `AGENTS.override.md` instead of `CLAUDE.md`
+- active workflow references instead of hidden `.claude` assumptions
+- explicit `$clo-*` skills instead of slash-command dependence
+- Codex custom subagents instead of Claude agent markdown files
+- explicit exploration scaffolding instead of undocumented folder conventions
+
+## What You Get
+
+- a five-phase research pipeline
+- worker-critic separation across the whole workflow
+- journal-aware peer review via editor plus blind referees
+- a Codex migration layer that makes the upstream Clo-Author manual readable without constant translation
+- a Sebastian overlay that shows one concrete Windows-based installation and research setup
+
+## Get Started in 5 Minutes
+
+### Step 1: Understand the install model
+
+The Codex adaptation assumes three main storage layers:
+
+- user skills in `~/.agents/skills`
+- mirrored compatibility skills in `~/.codex/skills`
+- custom subagents in `~/.codex/agents`
+
+Repo-specific overrides still belong in:
+
+- `AGENTS.md`
+- `AGENTS.override.md`
+- `.agents/skills/`
+
+### Step 2: Translate the upstream mental model
+
+If the upstream Clo-Author manual says:
+
+- `CLAUDE.md` -> read or create `AGENTS.md`
+- `.claude/rules` -> use active workflow references plus repo overlay guidance
+- `/discover` -> use `$clo-discover`
+- `.claude/agents` -> use Codex custom subagents
+
+The public migration cheatsheet lives in [Reference](reference.qmd).
+
+### Step 3: Create or adapt a repo
+
+For a new research repo, the minimum Codex-facing structure is:
+
+- root `AGENTS.md`
+- optional `AGENTS.override.md`
+- repo-local skills in `.agents/skills/`
+- canonical manuscript, code, output, and docs directories
+- `explorations/` when the project needs a sandbox for prototypes
+
+### Step 4: Use the workflow phases
+
+The workflow stays the same:
+
+1. Discovery
+2. Strategy
+3. Execution
+4. Peer Review
+5. Submission
+
+Talks can run in parallel with review.
+
+### Step 5: Start with explicit skills
+
+The safest Codex-native entry points are:
+
+- `$clo-discover`
+- `$clo-strategize`
+- `$clo-analyze`
+- `$clo-write`
+- `$clo-review`
+- `$clo-submit`
+
+The architecture page explains how these map to agents and quality gates.
+
+## Prerequisites
+
+| Tool | Why it matters | Notes |
+|---|---|---|
+| Codex | Main orchestrator | Desktop or terminal usage both fit the architecture |
+| Python | Default automation and analysis language | Primary default in this adaptation |
+| Stata | Econometric co-default | Use when the repo or replication target centers Stata |
+| XeLaTeX | Paper compilation | Needed for LaTeX manuscripts and slides |
+| Git | Versioning and review workflow | Required for repo-based operation |
+| Quarto | Docs site only | Needed to render this manual locally |
+
+R and Julia remain supported, but they are no longer the default recommendation in the active Codex adaptation.
+
+## What This Site Is Not
+
+This site is not:
+
+- a literal Claude clone
+- a promise that Codex supports hidden `.claude` mechanics
+- a packaged installer for one exact workstation
+
+It is a public operating manual for a Codex-native port of the Clo-Author workflow.
+
+## Attribution
+
+This project is structurally inspired by [The Clo-Author](https://hsantanna.org/clo-author/) by Hugo Sant'Anna. The aim here is adaptation, not duplication.

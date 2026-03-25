@@ -1,0 +1,91 @@
+---
+title: "Reference"
+subtitle: "Quick lookup for skills, layers, and the Codex migration map"
+---
+
+# Quick Lookup
+
+## Core workflow skills
+
+| Upstream intent | Codex-facing entry point |
+|---|---|
+| new project pipeline | `$clo-new-project` |
+| discovery | `$clo-discover` |
+| identification strategy | `$clo-strategize` |
+| analysis and outputs | `$clo-analyze` |
+| drafting | `$clo-write` |
+| review and peer review | `$clo-review` |
+| revision cycle | `$clo-revise` |
+| talks | `$clo-talk` |
+| submission package | `$clo-submit` |
+| maintenance and upgrade | `$clo-research-tools` |
+
+## Install locations
+
+| Item | Generic location |
+|---|---|
+| user skills | `~/.agents/skills` |
+| compatibility mirror | `~/.codex/skills` |
+| custom subagents | `~/.codex/agents` |
+| repo-local skills | `.agents/skills/` |
+| session constitution | `AGENTS.md` |
+| repo overlay | `AGENTS.override.md` |
+
+# Codex Migration Cheatsheet
+
+This is the table that makes the upstream Clo-Author manual usable without constant mental translation.
+
+| If Clo-Author says | In Codex-Clo-Author use | Notes |
+|---|---|---|
+| `CLAUDE.md` | `AGENTS.md` plus `AGENTS.override.md` | Keep the constitution lean and move detail outward |
+| `.claude/rules` | active workflow references plus repo overlays | Use source mirrors only when provenance matters |
+| `.claude/references` | active `clo-workflow` references | Domain, journal, exploration, and migration guidance |
+| slash commands | explicit `$clo-*` skills | Preserve names, change invocation style |
+| `.claude/agents` | `~/.codex/agents` custom subagents | Main Codex session remains orchestrator |
+| `.claude/settings.json` hooks | explicit utilities and config guidance | Avoid undocumented hidden behavior |
+| `.claude` exploration instructions | `explorations/` folder plus exploration reference | Create the folder when missing |
+| orchestrator agent | main Codex session | No separate orchestrator install needed |
+
+# Worker-Critic Map
+
+| Worker | Reviewer |
+|---|---|
+| `librarian` | `librarian_critic` |
+| `explorer` | `explorer_critic` |
+| `strategist` | `strategist_critic` |
+| `coder` | `coder_critic` |
+| `writer` | `writer_critic` |
+| `storyteller` | `storyteller_critic` |
+
+# Journal Calibration Notes
+
+The active Codex adaptation is generic first, but the current defaults explicitly allow:
+
+- `Journal of Development Economics`
+- `Regional Studies`
+- `Journal of Economic Geography`
+
+The point is not to force those journals globally. The point is to show how the domain and journal layer should be adapted in practice.
+
+# Exploration Workflow Mapping
+
+| Workflow need | Codex-Clo-Author rule |
+|---|---|
+| prototype estimation idea | create or use `explorations/[name]/` |
+| temporary side output | keep it inside the exploration until promoted |
+| abandoned branch | archive under `explorations/ARCHIVE/` |
+| no exploration folder yet | create `explorations/README.md` and `explorations/ARCHIVE/` first |
+
+# Upgrade Workflow Mapping
+
+When upstream Clo-Author evolves, the Codex adaptation should:
+
+1. refresh the upstream source snapshot
+2. regenerate active Codex skills and subagents
+3. preserve source mirrors
+4. keep user-level defaults separate from repo overlays
+5. verify active docs no longer carry stale Claude-only instructions
+
+# Attribution and Scope
+
+This reference is intentionally compact. It is here to make the upstream Clo-Author manual readable to a Codex user, not to replace deeper architecture or customization material.

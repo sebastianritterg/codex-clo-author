@@ -1,0 +1,16 @@
+# Codex-Clo-Author Docs Repo
+
+This repository is the source of truth for the public Codex-Clo-Author manual and Quarto site.
+
+## Editing Rules
+
+- Edit content under `guide/`. Treat `docs/` as generated output.
+- Keep the information architecture aligned with Clo-Author: Quick Start, User Guide, Agents, Architecture, Customization, Reference.
+- Rewrite for Codex-native concepts. Do not leave Claude-only instructions in active documentation.
+- Preserve the worker-critic architecture, the five pipeline phases, and the exploration sandbox model.
+- Keep the public docs generic first. Put Sebastian-specific defaults in clearly labeled overlay sections.
+
+## Render Rule
+
+- When Quarto is available, render from `guide/` so output lands in `docs/`.
+- Do not hand-edit generated HTML in `docs/` except for temporary placeholders before the first render.

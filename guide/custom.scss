@@ -1,0 +1,62 @@
+/*-- scss:defaults --*/
+
+$body-bg: #f6f2ea;
+$body-color: #18221f;
+$link-color: #0d6b61;
+$navbar-bg: #18221f;
+$navbar-fg: #f6f2ea;
+$navbar-hl: #e38852;
+$primary: #0d6b61;
+$secondary: #6c7b77;
+$success: #2b7a4b;
+$warning: #c77c2c;
+$info: #3978a8;
+
+/*-- scss:rules --*/
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(13, 107, 97, 0.08), transparent 24rem),
+    radial-gradient(circle at bottom right, rgba(227, 136, 82, 0.1), transparent 22rem),
+    $body-bg;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+h1.title {
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+}
+
+.quarto-title-block .quarto-title-banner {
+  background:
+    linear-gradient(140deg, rgba(24, 34, 31, 0.96), rgba(13, 107, 97, 0.88));
+}
+
+.quarto-title-block .title,
+.quarto-title-block .subtitle {
+  color: #f6f2ea;
+}
+
+.callout {
+  border-radius: 14px;
+}
+
+pre, code {
+  font-size: 0.94rem;
+}
+
+table {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.sidebar nav[role="doc-toc"] {
+  border-left: 2px solid rgba(13, 107, 97, 0.2);
+  padding-left: 0.9rem;
+}
