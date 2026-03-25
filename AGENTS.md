@@ -8,7 +8,7 @@ This repository is the source of truth for the public Codex-Clo-Author manual an
 - Keep the information architecture aligned with Clo-Author: Quick Start, User Guide, Agents, Architecture, Customization, Reference.
 - Rewrite for Codex-native concepts. Do not leave Claude-only instructions in active documentation.
 - Preserve the worker-critic architecture, the five pipeline phases, and the exploration sandbox model.
-- Keep the public docs generic first. Put Sebastian-specific defaults in clearly labeled overlay sections.
+- Keep the public docs generic first. If you show a concrete install or field profile, label it as an example overlay rather than a personal default.
 
 ## Render Rule
 

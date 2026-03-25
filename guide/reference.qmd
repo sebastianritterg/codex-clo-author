@@ -59,13 +59,15 @@ This is the table that makes the upstream Clo-Author manual usable without const
 
 # Journal Calibration Notes
 
-The active Codex adaptation is generic first, but the current defaults explicitly allow:
+The public Codex adaptation should stay generic first. Any user can adapt the journal layer to their own field, target journals, and review culture.
+
+One example overlay may include:
 
 - `Journal of Development Economics`
 - `Regional Studies`
 - `Journal of Economic Geography`
 
-The point is not to force those journals globally. The point is to show how the domain and journal layer should be adapted in practice.
+Those examples are illustrative only. They are there to show how a concrete user profile can customize the domain and journal reference layer, not to define the public default.
 
 # Exploration Workflow Mapping
 

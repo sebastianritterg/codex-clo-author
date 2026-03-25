@@ -25,7 +25,7 @@ The goal is simple: preserve the workflow that makes Clo-Author useful for resea
 - worker-critic separation across the whole workflow
 - journal-aware peer review via editor plus blind referees
 - a Codex migration layer that makes the upstream Clo-Author manual readable without constant translation
-- a Sebastian overlay that shows one concrete Windows-based installation and research setup
+- an example overlay that shows how one concrete installation and research setup can adapt the generic workflow
 
 ## Get Started in 5 Minutes
 

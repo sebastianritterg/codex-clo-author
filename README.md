@@ -37,8 +37,8 @@ This repository is documentation-first. It explains the architecture, customizat
 - Python is the primary default language
 - Stata is the co-default
 - R and Julia remain supported
-- Journal of Development Economics appears in journal-targeting examples
-- Regional Studies and Journal of Economic Geography are included as neighboring outlets
+- journal targeting remains customizable and is not limited to a fixed list
+- example overlays may mention concrete journals to illustrate how a user can adapt the reference layer
 
 ## Local Development
 

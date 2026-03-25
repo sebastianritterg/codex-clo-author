@@ -88,9 +88,9 @@ If exploratory work is needed and the folder is missing, create:
 
 Then keep each exploration in its own subfolder until the work graduates into the canonical pipeline.
 
-# Sebastian Overlay
+# Example Overlay
 
-This section documents one concrete installation and research profile.
+This section shows one concrete installation and research profile as an example, not as the public default.
 
 ## Install layout
 
@@ -104,8 +104,8 @@ This section documents one concrete installation and research profile.
 - Python primary
 - Stata co-default
 - R and Julia supported when explicitly needed
-- journal examples include `Journal of Development Economics`
-- neighboring regional outlets include `Regional Studies` and `Journal of Economic Geography`
+- journal calibration is open-ended and can be adapted to any target journal set
+- one example overlay may include `Journal of Development Economics`, `Regional Studies`, and `Journal of Economic Geography` to show how a user can customize the reference layer
 
 ## Repo overlay pattern
 
@@ -116,9 +116,9 @@ For a project repo:
 - put repo-only skills in `.agents/skills/`
 - create `explorations/` when the project needs a prototype sandbox
 
-## Research orientation
+## Example research orientation
 
-The current overlay is designed around empirical economics and adjacent social science workflows, not general software engineering alone.
+This example overlay is designed around empirical economics and adjacent social science workflows, not general software engineering alone.
 
 # Practical Customization Strategy
 
