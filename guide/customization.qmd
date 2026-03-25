@@ -20,8 +20,7 @@ The main rule is:
 | `AGENTS.md` | session constitution and stable working rules |
 | `AGENTS.override.md` | repo-specific overlay |
 | `.agents/skills/` | repo-local extensions and domain skills |
-| `~/.agents/skills` | user-level workflow skills |
-| `~/.codex/skills` | compatibility mirror for user-level skills |
+| `~/.codex/skills` | user-level workflow skills |
 | `~/.codex/agents` | custom subagents |
 | workflow references | active domain, journal, migration, and exploration guidance |
 
@@ -94,8 +93,7 @@ This section shows one concrete installation and research profile as an example,
 
 ## Install layout
 
-- user skills: `C:\Users\USER\.agents\skills`
-- compatibility mirror: `C:\Users\USER\.codex\skills`
+- user skills: `C:\Users\USER\.codex\skills`
 - custom subagents: `C:\Users\USER\.codex\agents`
 - user-level constitution: `C:\Users\USER\.codex\AGENTS.md`
 

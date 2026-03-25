@@ -102,7 +102,7 @@
     "href": "index.html#get-started-in-5-minutes",
     "title": "Codex-Clo-Author",
     "section": "Get Started in 5 Minutes",
-    "text": "Get Started in 5 Minutes\n\nStep 1: Understand the install model\nThe Codex adaptation assumes three main storage layers:\n\nuser skills in ~/.agents/skills\nmirrored compatibility skills in ~/.codex/skills\ncustom subagents in ~/.codex/agents\n\nRepo-specific overrides still belong in:\n\nAGENTS.md\nAGENTS.override.md\n.agents/skills/\n\n\n\nStep 2: Translate the upstream mental model\nIf the upstream Clo-Author manual says:\n\nCLAUDE.md -&gt; read or create AGENTS.md\n.claude/rules -&gt; use active workflow references plus repo overlay guidance\n/discover -&gt; use $clo-discover\n.claude/agents -&gt; use Codex custom subagents\n\nThe public migration cheatsheet lives in Reference.\n\n\nStep 3: Create or adapt a repo\nFor a new research repo, the minimum Codex-facing structure is:\n\nroot AGENTS.md\noptional AGENTS.override.md\nrepo-local skills in .agents/skills/\ncanonical manuscript, code, output, and docs directories\nexplorations/ when the project needs a sandbox for prototypes\n\n\n\nStep 4: Use the workflow phases\nThe workflow stays the same:\n\nDiscovery\nStrategy\nExecution\nPeer Review\nSubmission\n\nTalks can run in parallel with review.\n\n\nStep 5: Start with explicit skills\nThe safest Codex-native entry points are:\n\n$clo-discover\n$clo-strategize\n$clo-analyze\n$clo-write\n$clo-review\n$clo-submit\n\nThe architecture page explains how these map to agents and quality gates."
+    "text": "Get Started in 5 Minutes\n\nStep 1: Understand the install model\nThe Codex adaptation assumes two main user-level storage layers:\n\nuser skills in ~/.codex/skills\ncustom subagents in ~/.codex/agents\n\nRepo-specific overrides still belong in:\n\nAGENTS.md\nAGENTS.override.md\n.agents/skills/\n\n\n\nStep 2: Translate the upstream mental model\nIf the upstream Clo-Author manual says:\n\nCLAUDE.md -&gt; read or create AGENTS.md\n.claude/rules -&gt; use active workflow references plus repo overlay guidance\n/discover -&gt; use $clo-discover\n.claude/agents -&gt; use Codex custom subagents\n\nThe public migration cheatsheet lives in Reference.\n\n\nStep 3: Create or adapt a repo\nFor a new research repo, the minimum Codex-facing structure is:\n\nroot AGENTS.md\noptional AGENTS.override.md\nrepo-local skills in .agents/skills/\ncanonical manuscript, code, output, and docs directories\nexplorations/ when the project needs a sandbox for prototypes\n\n\n\nStep 4: Use the workflow phases\nThe workflow stays the same:\n\nDiscovery\nStrategy\nExecution\nPeer Review\nSubmission\n\nTalks can run in parallel with review.\n\n\nStep 5: Start with explicit skills\nThe safest Codex-native entry points are:\n\n$clo-discover\n$clo-strategize\n$clo-analyze\n$clo-write\n$clo-review\n$clo-submit\n\nThe architecture page explains how these map to agents and quality gates."
   },
   {
     "objectID": "index.html#prerequisites",
@@ -130,7 +130,7 @@
     "href": "architecture.html",
     "title": "Architecture",
     "section": "",
-    "text": "The original Clo-Author architecture is powerful because it separates:\n\nproject constitution\nalways-needed workflow rules\non-demand references\non-demand workflows\nspecialist agents\ninfrastructure behavior\n\nThe Codex adaptation keeps that shape, but translates the layers into Codex-native surfaces.\n\n\n\n\n\n\n\n\nLayer\nCodex-native location\nLoaded when\n\n\n\n\nSession constitution\nAGENTS.md\nevery session in the repo\n\n\nRepo overlay\nAGENTS.override.md\nevery session when present\n\n\nRepo-local skills\n.agents/skills/\non demand or by explicit mention\n\n\nUser skills\n~/.agents/skills and mirror ~/.codex/skills\non demand or implicit by policy\n\n\nCustom subagents\n~/.codex/agents\nwhen the main session delegates\n\n\nExplicit utilities and config\nscripts, references, config.toml\nwhen invoked\n\n\n\nThe important design difference is that Codex should not be documented as if hidden Claude hooks still exist. If behavior matters, it needs an explicit home."
+    "text": "The original Clo-Author architecture is powerful because it separates:\n\nproject constitution\nalways-needed workflow rules\non-demand references\non-demand workflows\nspecialist agents\ninfrastructure behavior\n\nThe Codex adaptation keeps that shape, but translates the layers into Codex-native surfaces.\n\n\n\n\n\n\n\n\nLayer\nCodex-native location\nLoaded when\n\n\n\n\nSession constitution\nAGENTS.md\nevery session in the repo\n\n\nRepo overlay\nAGENTS.override.md\nevery session when present\n\n\nRepo-local skills\n.agents/skills/\non demand or by explicit mention\n\n\nUser skills\n~/.codex/skills\non demand or implicit by policy\n\n\nCustom subagents\n~/.codex/agents\nwhen the main session delegates\n\n\nExplicit utilities and config\nscripts, references, config.toml\nwhen invoked\n\n\n\nThe important design difference is that Codex should not be documented as if hidden Claude hooks still exist. If behavior matters, it needs an explicit home."
   },
   {
     "objectID": "architecture.html#agents-by-phase",
@@ -291,7 +291,7 @@
     "href": "customization.html#install-layout",
     "title": "Customization",
     "section": "Install layout",
-    "text": "Install layout\n\nuser skills: C:\\Users\\USER\\.agents\\skills\ncompatibility mirror: C:\\Users\\USER\\.codex\\skills\ncustom subagents: C:\\Users\\USER\\.codex\\agents\nuser-level constitution: C:\\Users\\USER\\.codex\\AGENTS.md"
+    "text": "Install layout\n\nuser skills: C:\\Users\\USER\\.codex\\skills\ncustom subagents: C:\\Users\\USER\\.codex\\agents\nuser-level constitution: C:\\Users\\USER\\.codex\\AGENTS.md"
   },
   {
     "objectID": "customization.html#active-workflow-defaults",
@@ -319,7 +319,7 @@
     "href": "reference.html",
     "title": "Reference",
     "section": "",
-    "text": "Upstream intent\nCodex-facing entry point\n\n\n\n\nnew project pipeline\n$clo-new-project\n\n\ndiscovery\n$clo-discover\n\n\nidentification strategy\n$clo-strategize\n\n\nanalysis and outputs\n$clo-analyze\n\n\ndrafting\n$clo-write\n\n\nreview and peer review\n$clo-review\n\n\nrevision cycle\n$clo-revise\n\n\ntalks\n$clo-talk\n\n\nsubmission package\n$clo-submit\n\n\nmaintenance and upgrade\n$clo-research-tools\n\n\n\n\n\n\n\n\n\nItem\nGeneric location\n\n\n\n\nuser skills\n~/.agents/skills\n\n\ncompatibility mirror\n~/.codex/skills\n\n\ncustom subagents\n~/.codex/agents\n\n\nrepo-local skills\n.agents/skills/\n\n\nsession constitution\nAGENTS.md\n\n\nrepo overlay\nAGENTS.override.md"
+    "text": "Upstream intent\nCodex-facing entry point\n\n\n\n\nnew project pipeline\n$clo-new-project\n\n\ndiscovery\n$clo-discover\n\n\nidentification strategy\n$clo-strategize\n\n\nanalysis and outputs\n$clo-analyze\n\n\ndrafting\n$clo-write\n\n\nreview and peer review\n$clo-review\n\n\nrevision cycle\n$clo-revise\n\n\ntalks\n$clo-talk\n\n\nsubmission package\n$clo-submit\n\n\nmaintenance and upgrade\n$clo-research-tools\n\n\n\n\n\n\n\n\n\nItem\nGeneric location\n\n\n\n\nuser skills\n~/.codex/skills\n\n\ncustom subagents\n~/.codex/agents\n\n\nrepo-local skills\n.agents/skills/\n\n\nsession constitution\nAGENTS.md\n\n\nrepo overlay\nAGENTS.override.md"
   },
   {
     "objectID": "reference.html#core-workflow-skills",
@@ -333,6 +333,6 @@
     "href": "reference.html#install-locations",
     "title": "Reference",
     "section": "",
-    "text": "Item\nGeneric location\n\n\n\n\nuser skills\n~/.agents/skills\n\n\ncompatibility mirror\n~/.codex/skills\n\n\ncustom subagents\n~/.codex/agents\n\n\nrepo-local skills\n.agents/skills/\n\n\nsession constitution\nAGENTS.md\n\n\nrepo overlay\nAGENTS.override.md"
+    "text": "Item\nGeneric location\n\n\n\n\nuser skills\n~/.codex/skills\n\n\ncustom subagents\n~/.codex/agents\n\n\nrepo-local skills\n.agents/skills/\n\n\nsession constitution\nAGENTS.md\n\n\nrepo overlay\nAGENTS.override.md"
   }
 ]

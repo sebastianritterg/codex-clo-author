@@ -21,7 +21,7 @@ The Codex adaptation keeps that shape, but translates the layers into Codex-nati
 | Session constitution | `AGENTS.md` | every session in the repo |
 | Repo overlay | `AGENTS.override.md` | every session when present |
 | Repo-local skills | `.agents/skills/` | on demand or by explicit mention |
-| User skills | `~/.agents/skills` and mirror `~/.codex/skills` | on demand or implicit by policy |
+| User skills | `~/.codex/skills` | on demand or implicit by policy |
 | Custom subagents | `~/.codex/agents` | when the main session delegates |
 | Explicit utilities and config | scripts, references, `config.toml` | when invoked |
 

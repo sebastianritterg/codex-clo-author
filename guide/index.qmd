@@ -31,10 +31,9 @@ The goal is simple: preserve the workflow that makes Clo-Author useful for resea
 
 ### Step 1: Understand the install model
 
-The Codex adaptation assumes three main storage layers:
+The Codex adaptation assumes two main user-level storage layers:
 
-- user skills in `~/.agents/skills`
-- mirrored compatibility skills in `~/.codex/skills`
+- user skills in `~/.codex/skills`
 - custom subagents in `~/.codex/agents`
 
 Repo-specific overrides still belong in:

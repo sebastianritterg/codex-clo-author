@@ -24,8 +24,7 @@ subtitle: "Quick lookup for skills, layers, and the Codex migration map"
 
 | Item | Generic location |
 |---|---|
-| user skills | `~/.agents/skills` |
-| compatibility mirror | `~/.codex/skills` |
+| user skills | `~/.codex/skills` |
 | custom subagents | `~/.codex/agents` |
 | repo-local skills | `.agents/skills/` |
 | session constitution | `AGENTS.md` |
